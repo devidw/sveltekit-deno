@@ -2,13 +2,17 @@
 	"tasks": {
 		"dev": "deno run -A --node-modules-dir npm:vite dev",
 		"build": "deno run -A --node-modules-dir npm:vite build",
-		"preview": "deno run -A --node-modules-dir npm:vite preview"
+		"preview": "deno run -A --node-modules-dir npm:vite preview",
+		"prod": "PORT=6969 deno run --allow-env --allow-read --allow-net build/index.js",
+		"docker_build": "docker build -t web .",
+		"docker_run": "docker run --publish=6969:6969 web"
 	},
 	"imports": {
 		"@sveltejs/adapter-auto": "npm:@sveltejs/adapter-auto@^3.0.0",
 		"@sveltejs/kit": "npm:@sveltejs/kit@^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "npm:@sveltejs/vite-plugin-svelte@^4.0.0",
 		"svelte": "npm:svelte@^5.0.0",
+		"svelte-adapter-deno": "npm:svelte-adapter-deno@^0.9.1",
 		"svelte-check": "npm:svelte-check@^4.0.0",
 		"typescript": "npm:typescript@^5.0.0",
 		"vite": "npm:vite@^5.0.3"
