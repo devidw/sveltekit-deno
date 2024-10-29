@@ -1,0 +1,16 @@
+{
+	"tasks": {
+		"dev": "deno run -A --node-modules-dir npm:vite dev",
+		"build": "deno run -A --node-modules-dir npm:vite build",
+		"preview": "deno run -A --node-modules-dir npm:vite preview"
+	},
+	"imports": {
+		"@sveltejs/adapter-auto": "npm:@sveltejs/adapter-auto@^3.0.0",
+		"@sveltejs/kit": "npm:@sveltejs/kit@^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "npm:@sveltejs/vite-plugin-svelte@^4.0.0",
+		"svelte": "npm:svelte@^5.0.0",
+		"svelte-check": "npm:svelte-check@^4.0.0",
+		"typescript": "npm:typescript@^5.0.0",
+		"vite": "npm:vite@^5.0.3"
+	}
+}
